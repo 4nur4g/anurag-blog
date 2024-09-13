@@ -1,16 +1,15 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "The Bubbly Baker",
-  description: "My amazing recipe app",
-};
+  title: 'The Bubbly Baker',
+  description: 'My amazing recipe app'
+}
 
 export default function RootLayout({ children }) {
-
   let header = (
     <header>
       <Link href={'/'}>
@@ -32,5 +31,5 @@ export default function RootLayout({ children }) {
         {footer}
       </body>
     </html>
-  );
+  )
 }
