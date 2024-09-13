@@ -1,26 +1,28 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import dayjs from 'dayjs'
+const currentYear = dayjs().year()
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'The Bubbly Baker',
-  description: 'My amazing recipe app'
+  title: 'Anurag Notes',
+  description: 'Exploring tech trends and current affairs'
 }
 
 export default function RootLayout({ children }) {
   let header = (
     <header>
       <Link href={'/'}>
-        <h1>The Bubbly Baker</h1>
+        <h1>Anurag Pradhan</h1>
       </Link>
     </header>
   )
 
   let footer = (
     <footer>
-      <p>Made with 💛</p>
+      <p>&copy; {currentYear} Anurag Pradhan. All rights reserved.</p>
     </footer>
   )
   return (
