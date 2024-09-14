@@ -28,7 +28,6 @@ export async function generateMetadata({ params, searchParams }) {
 export default function RecipePage(props) {
   const slug = props.params.slug
   const post = getPostContent(slug)
-  console.log(post)
   return (
     <main className="grid grid-cols-1 gap-3.5">
       <Article post={post} />

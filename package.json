@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3005",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -29,10 +29,13 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.10.0",
     "eslint-config-next": "14.2.11",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3"
+    "postcss": "^8.4.45",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.11"
   }
 }
