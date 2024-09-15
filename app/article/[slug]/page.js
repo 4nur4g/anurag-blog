@@ -9,8 +9,7 @@ function getPostContent(slug) {
   const file = folder + `${slug}.md`
   const content = fs.readFileSync(file, 'utf8')
 
-  const matterResult = matter(content)
-  return matterResult
+  return matter(content)
 }
 
 export const generateStaticParams = async () => {
@@ -18,7 +17,7 @@ export const generateStaticParams = async () => {
   return posts.map(post => ({ slug: post.slug }))
 }
 
-export async function generateMetadata({ params, searchParams }) {
+export async function generateMetadata({ params }) {
   const id = params?.slug ? ' ⋅ ' + params?.slug : ''
   return {
     title: `The Bubbly Baker ${id.replaceAll('_', ' ')}`

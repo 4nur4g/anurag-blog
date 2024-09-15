@@ -4,19 +4,9 @@ export default function PostCard(props) {
   const { post } = props
   return (
     <Link className="unstyled" href={`/article/${post.slug}`}>
-      <div className="flex flex-col gap-3.5 p-3.5 bg-white rounded-[14px] shadow-md h-full border border-transparent transition duration-200 hover:border-slate-300">
-        <h3>{post.title}</h3>
-        <p className="flex-1 text-slate-600">{post.bio}</p>
-        <div className="grid grid-cols-2 gap-3.5">
-          <div>
-            <h5>Prep Time</h5>
-            <p>{post.prep_time}</p>
-          </div>
-          <div>
-            <h5>Cook Time</h5>
-            <p>{post.cook_time}</p>
-          </div>
-        </div>
+      <div className="flex flex-col gap-4 p-4 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:border-gray-300">
+        <h3 className="text-xl font-semibold text-gray-800">{post.title}</h3>
+        <p className="flex-1 text-gray-600 text-sm">{post.bio}</p>
       </div>
     </Link>
   )
