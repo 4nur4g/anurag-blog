@@ -13,29 +13,16 @@ export function ArticleTypeToggleComponent() {
         type="single"
         value={articleType}
         onValueChange={value => value && setArticleType(value)}
-        className="bg-background border border-border rounded-md"
       >
-        <ToggleGroupItem
-          value="All"
-          aria-label="Show all articles"
-          className="px-3 py-2 data-[state=on]:bg-muted data-[state=on]:text-primary"
-        >
+        <ToggleGroupItem value="All" aria-label="Show all articles">
           <Globe className="h-4 w-4 mr-2" />
           All
         </ToggleGroupItem>
-        <ToggleGroupItem
-          value="Tech"
-          aria-label="Show tech articles"
-          className="px-3 py-2 data-[state=on]:bg-muted data-[state=on]:text-primary"
-        >
+        <ToggleGroupItem value="Tech" aria-label="Show tech articles">
           <Monitor className="h-4 w-4 mr-2" />
           Tech
         </ToggleGroupItem>
-        <ToggleGroupItem
-          value="Society"
-          aria-label="Show society articles"
-          className="px-3 py-2 data-[state=on]:bg-muted data-[state=on]:text-primary"
-        >
+        <ToggleGroupItem value="Society" aria-label="Show society articles">
           <Users className="h-4 w-4 mr-2" />
           Society
         </ToggleGroupItem>

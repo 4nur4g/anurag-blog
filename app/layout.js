@@ -34,14 +34,9 @@ export default function RootLayout({ children }) {
     </footer>
   )
   return (
-    <html lang="en">
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+    <html suppressHydrationWarning lang="en">
+      <body className="transition-colors duration-200 ease-in-out bg-background">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-[800px] mx-auto flex flex-col min-h-screen p-3">
             <header className="flex-shrink-0">{header}</header>
             <main className="flex-1">{children}</main>
