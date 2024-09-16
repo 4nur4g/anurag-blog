@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     </footer>
   )
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body>
         <ThemeProvider
           attribute="class"
