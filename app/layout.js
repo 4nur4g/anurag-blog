@@ -23,8 +23,11 @@ export default function RootLayout({ children }) {
     <html suppressHydrationWarning lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="bg-background p-4">
-            <div className="max-w-[800px] mx-auto flex flex-col min-h-screen bg-background">
+          <div
+            data-vaul-drawer-wrapper=""
+            className="p-4 min-h-screen flex flex-col items-center bg-background"
+          >
+            <div className="max-w-[800px] w-full flex flex-col flex-1">
               <Header />
               <main className="flex-1">{children}</main>
               <footer className="flex-shrink-0">{footer}</footer>

@@ -5,11 +5,7 @@ import { Drawer as DrawerPrimitive } from 'vaul'
 
 import { cn } from '@/lib/utils'
 
-const Drawer = ({
-  shouldScaleBackground = true,
-  setBackgroundColorOnScale = false,
-  ...props
-}) => (
+const Drawer = ({ shouldScaleBackground = true, ...props }) => (
   <DrawerPrimitive.Root
     shouldScaleBackground={shouldScaleBackground}
     {...props}
@@ -58,7 +54,7 @@ const DrawerHeader = ({ className, ...props }) => (
     {...props}
   />
 )
-DrawerHeader.displayName = ''
+DrawerHeader.displayName = 'DrawerHeader'
 
 const DrawerFooter = ({ className, ...props }) => (
   <div
