@@ -1,10 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Link from 'next/link'
 import dayjs from 'dayjs'
-import { ArticleTypeToggleComponent } from '@/components/article-type-toggle.jsx'
 import { ThemeProvider } from '@/components/theme-provider'
-import { ThemeToggleDropdownMenu } from '@/components/theme-toggle.js'
+import { Header } from '@/components/header'
 
 const currentYear = dayjs().year()
 
@@ -16,18 +14,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  let header = (
-    <header className="pt-[14px] pb-[14px] px-0 flex justify-between flex-wrap gap-2">
-      <Link href={'/'}>
-        <h1 className="text-3xl font-bold no-underline">Anurag Notes</h1>
-      </Link>
-      <div className="flex items-center gap-2">
-        <ArticleTypeToggleComponent />
-        <ThemeToggleDropdownMenu />
-      </div>
-    </header>
-  )
-
   let footer = (
     <footer className="max-w-[800px] mx-auto w-full flex items-center justify-center p-6">
       <p>&copy; {currentYear} Anurag Pradhan. All rights reserved.</p>
@@ -35,12 +21,14 @@ export default function RootLayout({ children }) {
   )
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="transition-colors duration-200 ease-in-out bg-background">
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-[800px] mx-auto flex flex-col min-h-screen p-3">
-            <header className="flex-shrink-0">{header}</header>
-            <main className="flex-1">{children}</main>
-            <footer className="flex-shrink-0">{footer}</footer>
+          <div className="bg-background p-4">
+            <div className="max-w-[800px] mx-auto flex flex-col min-h-screen bg-background">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <footer className="flex-shrink-0">{footer}</footer>
+            </div>
           </div>
         </ThemeProvider>
       </body>
