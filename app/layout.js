@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   let footer = (
     <footer className="max-w-[800px] mx-auto w-full flex items-center justify-center p-6">
-      <p>&copy; {currentYear} Anurag Pradhan. All rights reserved.</p>
+      <p>&copy; {currentYear} Anurag Pradhan</p>
     </footer>
   )
   return (
